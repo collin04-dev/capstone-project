@@ -9,8 +9,8 @@ export default function Cart() {
         <>
             <h3>Your Cart</h3>
             <div className="row">
-                <div className="col-sm-8">
-                    <table className="table">
+                <div className="col-sm-12">
+                    <table className="table text-center">
                         <thead>
                             <tr>
                                 <th>Item</th>
@@ -37,17 +37,32 @@ export default function Cart() {
                         </tbody>
                     </table>
                 </div>
-                <div id="total-price" className="col-sm-4">
-
-                    SubTotal: ${subTotal.toFixed(2)}
-                    <br />
-                    Taxes: ${taxes.toFixed(2)}
-                    <br />
-                    Shipping: ${shipping.toFixed(2)}
-                    <br />
-                    Grand Total: <strong>${grandTotal.toFixed(2)}</strong>
-                </div>
+                
             </div>
+                
+            <div class="row">   
+                <div id="total-price" className="col-sm-12 text-center">
+                    <tabel id="totalTable">
+                        <tr>
+                            <td>SubTotal:</td>
+                            <td>${subTotal.toFixed(2)}</td>
+                        </tr>
+                        <tr>
+                            <td>Taxes: </td>
+                            <td>${taxes.toFixed(2)}</td>
+                        </tr>
+                        <tr>
+                            <td>Shipping: </td>
+                            <td>${shipping.toFixed(2)}</td>
+                        </tr>
+                        <tr>
+                            <td id="totalPrice">Grand Total: </td>
+                            <td id="totalPrice"><strong>${grandTotal.toFixed(2)}</strong></td>
+                        </tr>  
+                    </tabel>
+                </div>
+            </div>    
+
         </>
 
     )

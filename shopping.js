@@ -17,13 +17,17 @@ const cart = {
 
         if (item.sku in cart) {
             cart[item.sku].qty += 1
+            
         }
         else {
             item.qty = 1;
             cart[item.sku] = item;
+            
         }
 
         window.localStorage.setItem("react-cart", JSON.stringify(cart));
+
+        
     },
 
     getItems: function() {

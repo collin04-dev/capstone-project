@@ -31,8 +31,9 @@ export default function CheckoutForm() {
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Name" value={fullname} onChange={(e) => { setFullname(e.target.value) } } />
             </div>
             </div>
-
-            <button className="btn btn-lg btn-outline-light carousel-inner" onClick={() => saveOrder()}>Place Order</button>
+            <div id="orderButton" class="text-center">
+            <button className="btn btn-large btn-success" onClick={() => saveOrder()}>Place Order</button>
+            </div>
         </>
     )
 }

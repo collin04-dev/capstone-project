@@ -54,14 +54,16 @@ header h4 {
 
 .jumbotron video {
 	position: absolute;
-	top: -125px;
+	top: 50%;
+	height:170%;
+	transform: translateY(-50%);
 	right: 0;
 	bottom:0px;
 	left: 0;
 	overflow: hidden;
 	z-index: 1;
 	width: 100%;
-	object-fit: cover;
+	object-fit: inherit;
 	
 
 }
@@ -101,10 +103,11 @@ header h4 {
 .gameImg {
 	height: 200px;
 	width: 350px;
+	margin-top: 8px;
 }
 
 .title-container {
-	margin-top: 15px;
+	margin-top: 30px;
 	margin-bottom: 60px;
 }
 
@@ -141,7 +144,16 @@ header h4 {
 	float: left;
 }
 
-h3, tr, th {
+.right {
+	float: right;
+}
+
+.display {
+	display: inline-block;
+	
+}
+
+h3, tr, th, hr {
 	color: white;
 }
 
@@ -149,8 +161,43 @@ h3, tr, th {
 	color: white;
 }
 
+#itemsInCart {
+	margin-left: 8px;
+}
+
 .color-white {
 	color: white;
+}
+
+td {
+	width: 25%
+}
+
+#totalTable td{
+	font-size: 30px;
+}
+
+#totalPrice {
+	border-top: 1px solid white;
+}
+
+#orderButton {
+	margin-bottom: 10px;
+}
+
+.table {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.carousel {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#gameTitle {
+	font-size: 3rem;
+	letter-spacing: 0.75rem;
 }
 
 
@@ -174,7 +221,7 @@ h3, tr, th {
   #stars:after {
 	content: " ";
 	position: absolute;
-	top: 2000px;
+	top: 0px;
 	width: 1px;
 	height: 1px;
 	background: transparent;

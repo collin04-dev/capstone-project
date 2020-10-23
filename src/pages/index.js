@@ -1,12 +1,19 @@
 import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import Helmet from "react-helmet"
+
 
 export default function Home({data}) {
   return (
 
   <Layout>
+
+    <Helmet>
+      <title>Homepage</title>
+    </Helmet>
+
     <h3>Best Sellers</h3>
 
     <br/>
@@ -22,9 +29,9 @@ export default function Home({data}) {
               <h5 class="card-title">{ node.title }</h5>
               <p class="card-text">{ node.summary.summary }</p>
               <div class="btn-group">
-                <a href={node.title} class="btn btn-outline-success">View Product</a>
-                <p class="card-text price-text"><strong>$ { node.price } </strong></p>
+                <a href={node.title} class="btn btn-outline-success display">View Product</a>
               </div>
+              <p class="card-text price-text display"><strong>$ { node.price } </strong></p>
             </div>
           </div>
         </div>

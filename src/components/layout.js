@@ -1,11 +1,13 @@
 import React from "react"
 import { Link } from "@reach/router"
 import "./layout.scss";
-import { StaticQuery } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 import { CartContextProvider } from "../../shopping.js"
 import video from "../media/bannercontentful.mp4"
 
+
 export default function Layout({children}) {
+
     return (
         <>
         <CartContextProvider>
@@ -14,7 +16,7 @@ export default function Layout({children}) {
                 <button class="btn btn-outline-light" type="button"><Link to='/'>Home</Link></button>  
             </form>
             
-            <button class="btn btn-outline-success ml-auto" type="button"><Link to='/checkout/'>Cart</Link></button>
+            <button class="btn btn-outline-success ml-auto" type="button"><Link to='/checkout'>Cart</Link></button>
         </nav>
 
 
