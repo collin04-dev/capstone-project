@@ -4,6 +4,8 @@ import Layout from "../components/layout"
 import Carousel from "react-bootstrap/Carousel"
 import AddToCart from "../components/add-to-cart.js"
 import { Helmet } from "react-helmet"
+import Tabs from "react-bootstrap/Tabs"
+import Tab  from "react-bootstrap/Tab"
 
 
 export default function gameTemplate({data}) {
@@ -24,8 +26,8 @@ export default function gameTemplate({data}) {
                 <div class="row">
                     <div class="col-sm-8 container-middle carousel-inner">
                         <h1 id="gameTitle" class="display">{game.title}</h1>  
-                        <h2 class="card-text price-text display"><em>  $ { game.price } </em></h2>
-                        <hr/>
+                        
+                        <hr/><h2 class="card-text price-text display text-center"><em>  $ { game.price } </em></h2>
                         <div><AddToCart item={ {sku: game.sku, price: game.price, title: game.title} }></AddToCart></div>
                     </div>
                     
@@ -36,16 +38,15 @@ export default function gameTemplate({data}) {
             </div>
             
             <div class="container container-middle">
-            <Carousel interval = {null} class="casousel-features">
-                <Carousel.Item>
-                    <h2 class="text-center">Game Decription</h2>
-                    <div class="text-left">{game.description.description}</div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <h2 class="text-center">Features</h2>
-                    <div class="text-left">{game.addon.addon}</div>
-                </Carousel.Item>
-            </Carousel>
+
+            <Tabs defaultActiveKey="description" id="mainGameInfo">
+                <Tab eventKey="description" title="Description">
+                    <div>{game.description.description}</div>
+                </Tab>
+                <Tab eventKey="features" title="Features">
+                    <div>{game.addon.addon}</div>
+                </Tab>
+            </Tabs>
 
             <br/>
 
@@ -62,13 +63,28 @@ export default function gameTemplate({data}) {
                 </Carousel.Item>
             </Carousel>
 
+            <hr/>
+            
+            <h1 class="text-center trailerHeader">Trailer</h1>
+            <div class=".trailer">
+            <div className="embed-responsive embed-responsive-16by9">
+                <iframe title="Embeds Page" className="embed-responsive-item img-thumbnail" src= {game.youtubelink}
+                allowfullscreen></iframe>
+            </div>
+            </div>
+
             <br/>
 
             <h1 class="text-center">Game Specifications</h1>
             
             <p>
-                {game.description.description}
+                {game.Specifications.Specifications}
             </p>
+
+            <hr/>
+
+            <h1 class="text-center">See What Customers Say</h1>
+            
             </div>
 
         </Layout>
@@ -96,8 +112,13 @@ query gameQuery($slug: String!) {
       addon {
           addon
       }
+      Specifications {
+          Specifications
+      }
       price
       sku
+      youtubelink
+      
     }
   }
 

@@ -31,7 +31,7 @@ export default function Home({data}) {
               <div class="btn-group">
                 <a href={node.title} class="btn btn-outline-success display">View Product</a>
               </div>
-              <p class="card-text price-text display"><strong>$ { node.price } </strong></p>
+              <p class="card-text index-price-text display"><strong>$ { node.price } </strong></p>
             </div>
           </div>
         </div>

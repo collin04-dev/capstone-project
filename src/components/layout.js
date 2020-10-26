@@ -21,7 +21,8 @@ export default function Layout({children}) {
 
 
         <div class="jumbotron jumbotron-fluid center">
-            <video autoPlay muted loop playsInline><source src={video} type="video/mp4"/></video>
+            <video autoPlay muted loop playsInline><source src={video} type="video/mp4"/>
+            <img src ="" title="" /> </video>
 
             <div class="container">
                 <div style={{ maxWdith: '800px', margin: '0 auto'}}>

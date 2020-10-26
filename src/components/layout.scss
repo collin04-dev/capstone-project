@@ -31,6 +31,10 @@ h3 {
 	margin-top: 35px;
 }
 
+hr {
+	border-color: white;
+}
+
 header h1 {
 	color: orange;
 }
@@ -73,6 +77,10 @@ header h4 {
 
 }
 
+.trailerHeader {
+	margin-top: 30px;
+}
+
 .navbar {
 	border-bottom: 2px solid black;
 }
@@ -95,8 +103,13 @@ header h4 {
 }
 
 .price-text {
-	margin-left: 20px;
 	margin-top: 4px;
+	letter-spacing: 3px;
+	margin-bottom: 20px;
+}
+
+.index-price-text {
+	margin-left: 10px;
 	letter-spacing: 3px;
 }
 
@@ -115,6 +128,25 @@ header h4 {
 	margin-top: auto;
 	margin-bottom: auto;
 	color: white;
+}
+
+.embed-responsive iframe {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+iframe {
+	
+	margin-top: 20px;
+	right: 8px;
+}
+
+.embed-responsive-item {
+	width: 80%;
+	height: 80%;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .description-container{
@@ -138,6 +170,16 @@ header h4 {
 .carousel-indicators {
 	margin-top: 10px;
 	bottom: -40px;
+}
+
+#mainGameInfo-tab-description, #mainGameInfo-tab-features {
+	font-size: 30px;
+}
+
+.tab-content {
+	font-size: 20px;
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 
 .left {
@@ -199,6 +241,8 @@ td {
 	font-size: 3rem;
 	letter-spacing: 0.75rem;
 }
+
+
 
 
 //------------------------------//
