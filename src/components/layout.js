@@ -4,6 +4,7 @@ import "./layout.scss";
 import { StaticQuery, graphql } from "gatsby";
 import { CartContextProvider } from "../../shopping.js"
 import video from "../media/bannercontentful.mp4"
+import outer from "../media/outerwilds.jpg"
 
 
 export default function Layout({children}) {
@@ -22,7 +23,7 @@ export default function Layout({children}) {
 
         <div class="jumbotron jumbotron-fluid center">
             <video autoPlay muted loop playsInline><source src={video} type="video/mp4"/>
-            <img src ="" title="" /> </video>
+            <img src = {outer} title="Outer Wilds" /> </video>
 
             <div class="container">
                 <div style={{ maxWdith: '800px', margin: '0 auto'}}>

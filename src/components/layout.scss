@@ -147,6 +147,7 @@ iframe {
 	height: 80%;
 	margin-right: auto;
 	margin-left: auto;
+	background: none;
 }
 
 .description-container{
@@ -172,7 +173,7 @@ iframe {
 	bottom: -40px;
 }
 
-#mainGameInfo-tab-description, #mainGameInfo-tab-features {
+#mainGameInfo-tab-description, #mainGameInfo-tab-features, #mainGameInfo-tab-specs {
 	font-size: 30px;
 }
 
@@ -237,9 +238,21 @@ td {
 	margin-bottom: 50px;
 }
 
+#round-img {
+	border-radius: 45%;
+	height: 90px;
+	width: 80px;
+	margin-top: 5px;
+
+}
+
 #gameTitle {
 	font-size: 3rem;
 	letter-spacing: 0.75rem;
+}
+
+#customerComment {
+	top: 25px;
 }
 
 

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Carousel from "react-bootstrap/Carousel"
@@ -6,11 +6,25 @@ import AddToCart from "../components/add-to-cart.js"
 import { Helmet } from "react-helmet"
 import Tabs from "react-bootstrap/Tabs"
 import Tab  from "react-bootstrap/Tab"
+import { firestore } from  "../../firebase.js"
+import Comments from "../components/comments.js"
 
 
-export default function gameTemplate({data}) {
+export default function GameTemplate({data}) {
 
     const game = data.contentfulGames
+    const [comments, setComments] = useState([])
+
+    useEffect(() => {
+        firestore.collection(`comments`).orderBy(`Created`, `desc`).onSnapshot(snapshot => {
+          const posts = snapshot.docs
+            .filter(doc => doc.data().Page === game.title)
+            .map(doc => {
+              return { id: doc.id, ...doc.data() }
+            })
+          setComments(posts)
+        })
+      }, [game] )
     
 
     return (
@@ -46,6 +60,9 @@ export default function gameTemplate({data}) {
                 <Tab eventKey="features" title="Features">
                     <div>{game.addon.addon}</div>
                 </Tab>
+                <Tab eventKey="specs" title="Game Specifications">
+                    <div>{game.Specifications.Specifications}</div>
+                </Tab>
             </Tabs>
 
             <br/>
@@ -75,16 +92,13 @@ export default function gameTemplate({data}) {
 
             <br/>
 
-            <h1 class="text-center">Game Specifications</h1>
-            
-            <p>
-                {game.Specifications.Specifications}
-            </p>
 
             <hr/>
 
             <h1 class="text-center">See What Customers Say</h1>
-            
+
+            <Comments comments={comments} page={game.title} />
+
             </div>
 
         </Layout>
