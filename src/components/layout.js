@@ -23,10 +23,8 @@ export default function Layout({children}) {
 
 
         <div class="jumbotron jumbotron-fluid center">
-            <div class="bannerVideo">
-            <ReactPlayer url={video} preload playing="true" playsInline="true" autoPlay="true" muted="true" loop="true" pip="true" playIcon="false"/>
-            </div>
-            
+            <video playsInline autoPlay muted loop><source src={video} type="video/mp4"/>
+            <img src = {outer} title="Outer Wilds" /></video>
 
             <div class="container">
                 <div style={{ maxWdith: '800px', margin: '0 auto'}}>
