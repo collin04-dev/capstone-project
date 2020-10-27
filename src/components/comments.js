@@ -10,7 +10,8 @@ export default function Comments({ comments, page }) {
         
         {/* comment list */}
         {comments.length === 0 && 
-            <strong>Be the first to leave a comment!</strong>
+
+            <div class="text-center"><strong>Be the first to leave a comment!</strong><br/></div>
         }
         {comments.length > 0 && 
             comments.map((c, index) => (

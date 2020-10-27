@@ -64,7 +64,7 @@ export default function GameTemplate({data}) {
                     <div>{game.Specifications.Specifications}</div>
                 </Tab>
             </Tabs>
-
+            
             <br/>
 
             <h1 class="text-center">ScreenShots</h1>

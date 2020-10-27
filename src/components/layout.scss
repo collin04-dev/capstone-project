@@ -238,6 +238,12 @@ td {
 	margin-bottom: 50px;
 }
 
+.nav-tabs {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
 #round-img {
 	border-radius: 45%;
 	height: 90px;

@@ -26,6 +26,7 @@ export default function CommentForm({page}) {
 
     return (
         <>
+            <br/>
             <h4 class="text-center">Played This Game? Leave A Review!</h4>
 
             <form onSubmit={ e => handleCommentSubmission(e) }>
