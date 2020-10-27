@@ -48,7 +48,7 @@ header h4 {
 	overflow: hidden;
 	z-index: -100;
 	margin-bottom: 0;
-	background: none;
+	background-color: #000;
 }
 
 .jumbotron .container {
@@ -65,7 +65,7 @@ header h4 {
 	bottom:0px;
 	left: 0;
 	overflow: hidden;
-	z-index: 1;
+	z-index: 3;
 	width: 100%;
 	object-fit: inherit;
 	
