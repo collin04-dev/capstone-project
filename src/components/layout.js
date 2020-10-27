@@ -3,6 +3,7 @@ import { Link } from "@reach/router"
 import "./layout.scss";
 import { StaticQuery, graphql } from "gatsby";
 import { CartContextProvider } from "../../shopping.js"
+import ReactPlayer from "react-player"
 import video from "../media/bannercontentful.mp4"
 import outer from "../media/outerwilds.jpg"
 
@@ -22,8 +23,10 @@ export default function Layout({children}) {
 
 
         <div class="jumbotron jumbotron-fluid center">
-            <video webkit-playsInline autoPlay muted loop><source src={video} type="video/mp4"/>
-            <img src = {outer} title="Outer Wilds" /> </video>
+            <div class="bannerVideo">
+            <ReactPlayer url={video} playing="true" playsInline autoPlay="true" muted loop />
+            </div>
+            
 
             <div class="container">
                 <div style={{ maxWdith: '800px', margin: '0 auto'}}>
