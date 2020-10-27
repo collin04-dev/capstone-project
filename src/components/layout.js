@@ -24,7 +24,7 @@ export default function Layout({children}) {
 
         <div class="jumbotron jumbotron-fluid center">
             <div class="bannerVideo">
-            <ReactPlayer url={video} playing="true" playsInline="true" autoPlay="true" muted="true" loop="true" />
+            <ReactPlayer url={video} preload playing="true" playsInline="true" autoPlay="true" muted="true" loop="true" />
             </div>
             
 
