@@ -43,6 +43,12 @@ header h4 {
 	color: white;
 }
 
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+	video {
+		display: none;
+	}
+}
+
 .jumbotron {
 	position: relative;
 	overflow: hidden;
