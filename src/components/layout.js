@@ -23,7 +23,7 @@ export default function Layout({children}) {
 
 
         <div class="jumbotron jumbotron-fluid center">
-            <video playing playsInline="true" autoPlay muted loop><source src={video} type="video/mp4"/>
+            <video playsInline="true" autoPlay muted loop><source src={video} type="video/mp4"/>
             <img src = {outer} title="Outer Wilds" /></video>
 
             <div class="container">
