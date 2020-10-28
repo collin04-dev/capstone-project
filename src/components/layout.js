@@ -4,7 +4,7 @@ import "./layout.scss";
 import { StaticQuery, graphql } from "gatsby";
 import { CartContextProvider } from "../../shopping.js"
 import ReactPlayer from "react-player"
-import video from "../media/bannercontentful.mp4"
+import video from "../media/bannernoaudio.mp4"
 import outer from "../media/outerwilds.jpg"
 
 
