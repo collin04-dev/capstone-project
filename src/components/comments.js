@@ -6,9 +6,7 @@ export default function Comments({ comments, page }) {
     return (
      <>
         <br/>
-        {/* comment form */}
-        
-        {/* comment list */}
+        {/* comment form / List*/}
         {comments.length === 0 && 
 
             <div class="text-center"><strong>Be the first to leave a comment!</strong><br/></div>

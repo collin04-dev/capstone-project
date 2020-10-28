@@ -1,12 +1,12 @@
 import React, { useState } from "react"
 import axios from "axios"
-import Layout from "./layout"
 
 export default function CheckoutForm() {
 
     const [ email, setEmail ] = useState("");
     const [ fullname, setFullname ] = useState("");
 
+    {/*Function to send data to a phony webhook*/}
     function saveOrder() {
 
          let customer = {
@@ -20,6 +20,7 @@ export default function CheckoutForm() {
 
     return (
         <>
+            {/*Enter Customer Information for Order*/}
             <h2 class="carousel-inner color-white">Your Details</h2>
 
             <div class="container">

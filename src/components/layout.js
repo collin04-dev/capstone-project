@@ -7,9 +7,14 @@ import video from "../media/bannercontentful.mp4"
 import outer from "../media/outerwilds.jpg"
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome, faCartPlus } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function Layout({children}) {
+
+    const home = <FontAwesomeIcon icon={faHome} />
+    const cart = <FontAwesomeIcon icon={faCartPlus} />
 
     return (
         
@@ -17,23 +22,17 @@ export default function Layout({children}) {
         <CartContextProvider>
         <nav class="navbar navbar-dark bg-dark">
             <form class="form-inline my-2 my-lg-0 mr-sm-2">
-                <button class="btn btn-outline-light" type="button"><Link to='/'>Home</Link></button>  
+                <button class="btn btn-outline-light" type="button"><Link to='/'>{home}</Link></button>  
             </form>
-            
-            <button class="btn btn-outline-success ml-auto" type="button"><Link to='/checkout'>Cart</Link></button>
+            <button class="btn btn-outline-success ml-auto" type="button"><Link to='/checkout'>{cart}</Link></button>
         </nav>
 
-
+        {/*Video In Banner*/}
         <div class="jumbotron jumbotron-fluid center">
             <video playsInline autoPlay muted loop><source src={video} type="video/mp4"/>
             <img src = {outer} title="Outer Wilds" /></video>
-
             <div class="container">
                 <div style={{ maxWdith: '800px', margin: '0 auto'}}>
-                    
-
-                    {/*<h1>My First React Site</h1>*/}
-
                     <StaticQuery
                     query={graphql`
                     query HeadingQuery {
@@ -56,17 +55,14 @@ export default function Layout({children}) {
                 </div>
             </div>
         </div>
-
-        
+        {/*Main Star Animation*/}
         <div id="main-front">
         <div id ="stars2"></div>
-        <div id ="stars3"></div>
-                
+        <div id ="stars3"></div>      
         {children}
-    
-
     </div>     
     
+    {/*Bottom NavBar*/}
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Navbar.Brand href="/">Outer Wild Games</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -78,8 +74,6 @@ export default function Layout({children}) {
         </Navbar.Collapse>
     </Navbar>
     
-    
-
     </CartContextProvider>
     </body>      
     

@@ -12,11 +12,9 @@ export default function Home({data}) {
     <Helmet>
       <title>Homepage</title>
     </Helmet>
-
     <h3>Best Sellers</h3>
-
     <br/>
-
+    {/*Set Up Cards for Data coming in from Contentful DataBase */}
     {data.allContentfulGames.nodes.map((node, index) => (
       <div class="card text-white bg-dark mb-3">
         <div class="row no-gutters">

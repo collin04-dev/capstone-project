@@ -14,9 +14,7 @@ export default function Checkout() {
         </Helmet>
 
         <Layout>
-            
             <h1 class="carousel-inner color-white">Check Out</h1>
-            
             <Cart></Cart>
             <hr/>
             <CheckoutForm></CheckoutForm>

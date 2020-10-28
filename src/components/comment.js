@@ -1,6 +1,5 @@
 import React from "react"
 import "./layout.scss";
-import avatar from "../media/avatar.png"
 
 export default function Comment({comment}) {
     const timestamp = new Date(comment.Created.toDate())

@@ -7,6 +7,7 @@ export default function AddToCart({item}) {
 
     return (
         <>
+            {/*Creates Heading when no Comments are Detected */}
             <button class="btn btn-large btn-success ml-auto display"onClick={ () => addProduct(item)}>Add to Cart</button>
             <p id="itemsInCart" class="display">
             {itemCount === 0 &&

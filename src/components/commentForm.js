@@ -10,6 +10,7 @@ export default function CommentForm({page}) {
     const handleCommentSubmission = async e => {
         e.preventDefault()
 
+        {/*Create Customer Object*/}
         let comment = {
             Customer: customer,
             Message: message,
@@ -29,24 +30,21 @@ export default function CommentForm({page}) {
 
     return (
         <>
+            {/*Comment Form Found on GameTemplate*/}
             <br/>
             <h4 class="text-center">Played This Game? Leave A Review!</h4>
             <br/>
             <form onSubmit={ e => handleCommentSubmission(e) }>
-                <div class="row">
-                    <div class="col">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" htmlFor="name">Your Name</label>
-                            </div>
+                <div class="form-row">
+                    <div class="col-sm-10">
+                        <div class="form-group">
+                            <label htmlFor="name">Your Name</label>
                             <input type="text" name="name" class="form-control" value={customer} required onChange={e => setName(e.target.value)} />
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" htmlFor="rating">Rating 0 - 10</label>
-                            </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label htmlFor="rating">Rating 0 - 10</label>
                             <input type="number" name="rating"class="form-control" value={rating} required onChange={e => setRating(e.target.value)} />
                         </div>  
                     </div>
@@ -57,7 +55,7 @@ export default function CommentForm({page}) {
                     <textarea name="message" class="form-control" value={message} required onChange={e => setMessage(e.target.value)}></textarea>
                     <br/>
                     <div class="text-center">
-                    <button className="btn btn-light">Submit</button>
+                        <button className="btn btn-light">Submit</button>
                     </div>
                 </div>
             </form>
