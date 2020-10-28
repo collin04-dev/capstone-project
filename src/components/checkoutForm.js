@@ -8,13 +8,14 @@ export default function CheckoutForm() {
     const [ fullname, setFullname ] = useState("");
 
     function saveOrder() {
-        alert("This is sample cart, your order was not really completed.")
 
-        // let customer = {
-        //     fullname: fullname,
-        //     email: email,
-        // }
-        // axios.post("https://webhook.site/1022c860-ad18-46d0-9699-c8a6ad5ba435", customer);
+         let customer = {
+             fullname: fullname,
+             email: email,
+         }
+         axios.post("https://webhook.site/7534fbf4-2aae-4943-a3b9-9517cc87e359", customer);
+
+         alert("Thank you! Your Order Was Placed")
     }
 
     return (

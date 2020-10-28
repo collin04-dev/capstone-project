@@ -10,13 +10,14 @@ export default function Comment({comment}) {
     return (
         <>
             <div class="card">
-                <div class="row no-gutters">
-                    <div class="col-sm-1">
-                        <img id="round-img" class="card-img" src={avatar} alt={comment.Name} />
+                <div class="row commentRow text-center">
+                    <div class="card-title col-sm-2 text-center customerComment">
+                        <h2> {comment.Rating} / 10 </h2>
                     </div>
-                    <div id="customerComment" class="col-sm-11 card-text">
+                    <div class="col-sm-8 card-text customerComment">
                         <strong>  {comment.Customer} : </strong>
                         <em> {comment.Message}</em> 
+                        <br/>
                         <p class="card-subtitle text-muted">
                         <small>{tsMonth}/{tsDay}/{tsYear}</small>
                         </p>

@@ -3,15 +3,17 @@ import { Link } from "@reach/router"
 import "./layout.scss";
 import { StaticQuery, graphql } from "gatsby";
 import { CartContextProvider } from "../../shopping.js"
-import ReactPlayer from "react-player"
-import video from "../media/bannernoaudio.mp4"
+import video from "../media/bannercontentful.mp4"
 import outer from "../media/outerwilds.jpg"
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
 
 
 export default function Layout({children}) {
 
     return (
-        <>
+        
+        <body>
         <CartContextProvider>
         <nav class="navbar navbar-dark bg-dark">
             <form class="form-inline my-2 my-lg-0 mr-sm-2">
@@ -23,7 +25,7 @@ export default function Layout({children}) {
 
 
         <div class="jumbotron jumbotron-fluid center">
-            <video playsInline="true" autoPlay muted loop><source src={video} type="video/mp4"/>
+            <video playsInline autoPlay muted loop><source src={video} type="video/mp4"/>
             <img src = {outer} title="Outer Wilds" /></video>
 
             <div class="container">
@@ -55,36 +57,31 @@ export default function Layout({children}) {
             </div>
         </div>
 
-        <body>
+        
         <div id="main-front">
-
-        <div id="stars"></div>
         <div id ="stars2"></div>
+        <div id ="stars3"></div>
                 
         {children}
     
-                
-    <nav class="navbar sticky-bottom navbar-expand-lg navbar-light bg-dark">
-        <a class="navbar-brand" href="#">Outer Wilds Games</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
-            </li>
-            </ul>
-        </div>
-    </nav>
-    </div>
-    </body>
+
+    </div>     
+    
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar.Brand href="/">Outer Wild Games</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="mr-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/checkout">Cart</Nav.Link>
+            </Nav>
+        </Navbar.Collapse>
+    </Navbar>
+    
+    
 
     </CartContextProvider>
-            
-        </>
+    </body>      
+    
     )
 }
