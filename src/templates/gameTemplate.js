@@ -33,7 +33,6 @@ export default function GameTemplate({data}) {
           <title>{game.title}</title>
           <meta name="description" value="Come and See the Game we have!"/>
         </Helmet>
-
         <Layout bodyAttributes={ { class: `product-page ${game.sku}` } }>
             <div class="container title-container">
                 <div class="row">
